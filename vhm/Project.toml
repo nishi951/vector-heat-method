@@ -1,0 +1,15 @@
+name = "vhm"
+uuid = "09b0fcef-f943-4da4-8fe1-6733abf32ac7"
+authors = ["Mark Nishimura <nishimuramarky@yahoo.com>"]
+version = "0.1.0"
+
+[deps]
+Debugger = "31a5f54b-26ea-5ae9-a837-f05ce5417438"
+DiscreteDifferentialGeometry = "4ae10c0b-1ab8-4fd6-bf00-fff7d91da249"
+HalfEdges = "b1055ec2-7fd2-11e8-0664-e1e21354bdb9"
+Meshes = "eacbb407-ea5a-433e-ab97-5258b1ca43fa"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PlyIO = "42171d58-473b-503a-8d5f-782019eb09ec"
+ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
