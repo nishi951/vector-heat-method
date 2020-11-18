@@ -43,7 +43,7 @@ function getInteriorVerticesTangentSpaces(V, F, θ)
         push!(Adj[j], k), push!(Adj[j], i)
         push!(Adj[k], i), push!(Adj[k], j)
     end
-    int = zeros(Bool, N)
+    int = zeros(Bool, N)  # Indicator function for interior vertices
     for i in 1:N
         int[i] = length(Ord[i]) > 0 ? checkCycle(Ord[i], first(keys(Ord[i]))) : false
     end
@@ -126,9 +126,9 @@ function preprocess(V, F)
     end
     N = size(V, 1) # Number of vertices
     A = spzeros(size(F, 1)) # Face areas
-    θ = Dict(v => spzeros(N, N) for v in 1:N)
-    M = zeros(N)
-    E = spzeros(N, N)
+    θ = Dict(v => spzeros(N, N) for v in 1:N) # unnormalized vertex angles
+    M = zeros(N)  # Masses for each vertex
+    E = spzeros(N, N) # Edge lengths
     println("Computing angles and areas...")
     for (f, (i, j, k)) in ProgressBar(enumerate(F))
         vi, vj, vk = V[i, :], V[j, :], V[k, :]
